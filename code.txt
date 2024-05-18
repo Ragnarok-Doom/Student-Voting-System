@@ -1,0 +1,198 @@
+Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        Dim pdfFilePathh As String = pdfPath
+
+        Dim pdfFileName As String = InputBox("Enter the PDF file name:", "PDF File Name", "")
+        Dim pdfFilePath As String = Path.Combine(pdfFilePathh, pdfFileName + ".pdf")
+
+        ' Capture the content of the Panel and PictureBox as HTML
+        Dim panelHtmlContent As String = CapturePanelAsHtml(pnlInfo)
+
+        ' Combine the HTML content of Panel and PictureBox
+        Dim combinedHtmlContent As String = panelHtmlContent
+
+        ' Convert the HTML to PDF using wkhtmltopdf
+        ConvertHTMLToPDF(combinedHtmlContent, pdfFilePath)
+
+        ' Notify the user that the PDF has been generated
+        MessageBox.Show("PDF generated successfully")
+
+        ' Open the generated PDF using the default PDF viewer (optional)
+        Process.Start(pdfFilePath)
+    End Sub
+
+    Private Function CapturePanelAsHtml(ByVal panel As Panel) As String
+        ' Create a Bitmap to capture the content of the Panel
+        Using bmp As New Bitmap(panel.Width, panel.Height)
+            panel.DrawToBitmap(bmp, New Rectangle(0, 0, panel.Width, panel.Height))
+
+            ' Save the captured content as an image (PNG format)
+            Dim imageFileName As String = "panel_capture.jpeg"
+            bmp.Save(imageFileName, Imaging.ImageFormat.Jpeg)
+
+            ' Convert the image to HTML
+            Return "<img src=""" & imageFileName & """ />"
+        End Using
+    End Function
+
+    Private Function CapturePictureBoxAsHtml(ByVal pictureBox As CircularPictureBox) As String
+        ' Capture the PictureBox image as HTML
+        Try
+            Dim imageFileName As String = "picturebox_capture.jpeg"
+
+            ' Clone the image to ensure it's not locked by the PictureBox
+            Dim clonedImage As Image = pictureBox.Image.Clone()
+
+            ' Save the cloned image as JPEG
+            clonedImage.Save(imageFileName, Imaging.ImageFormat.Jpeg)
+
+            ' Dispose of the cloned image to release resources
+            clonedImage.Dispose()
+
+            ' Convert the image to HTML
+            Return "<img src=""" & imageFileName & """ />"
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message)
+            Return String.Empty
+        End Try
+
+        
+
+    End Function
+
+    Private Sub ConvertHtmlToPdf(ByVal htmlContent As String, ByVal pdfFilePath As String)
+        ' Execute wkhtmltopdf to convert HTML to PDF
+        Dim psi As New ProcessStartInfo()
+        psi.FileName = "wkhtmltopdf.exe" ' Path to wkhtmltopdf executable
+        psi.Arguments = "--page-size A4 - " & pdfFilePath ' Specify page size and input/output
+
+        psi.UseShellExecute = False
+        psi.CreateNoWindow = True
+        psi.RedirectStandardInput = True
+
+        Dim process As New Process()
+        process.StartInfo = psi
+        process.Start()
+
+        ' Write the HTML content to the input stream
+        Dim sw As StreamWriter = process.StandardInput
+        sw.Write(htmlContent)
+        sw.Close()
+
+        ' Wait for the conversion to complete
+        process.WaitForExit()
+    End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+' Specify the PDF file path
+        Dim pdfFilePathh As String = pdfPath
+
+        Dim pdfFileName As String = InputBox("Enter the PDF file name:", "PDF File Name", "")
+        Dim pdfFilePath As String = Path.Combine(pdfFilePathh, pdfFileName + ".pdf")
+
+        ' Capture the content of the Panel as HTML
+        Dim panelHtmlContent As String = CapturePanelAsHtml(pnlInfo)
+
+        ' Convert the HTML to PDF using wkhtmltopdf
+        ConvertHtmlToPdf(panelHtmlContent, pdfFilePath)
+
+        ' Notify the user that the PDF has been generated
+        MessageBox.Show("PDF generated successfully")
+
+        ' Open the generated PDF using the default PDF viewer (optional)
+        Process.Start(pdfFilePath)
+    End Sub
+
+    Private Function CapturePanelAsHtml(ByVal panel As Panel) As String
+        ' Create a StringBuilder to build the HTML content
+        Dim htmlContent As New StringBuilder()
+
+        ' Open the HTML document
+        htmlContent.Append("<html><body>")
+
+        ' Iterate through the controls on the Panel and capture their content as HTML
+        For Each ctrl As Control In panel.Controls
+            If TypeOf ctrl Is Label Then
+                Dim label As Label = DirectCast(ctrl, Label)
+                ' Capture the Label's text as HTML
+                htmlContent.Append("<p>").Append(label.Text).Append("</p>")
+            ElseIf TypeOf ctrl Is CircularPictureBox Then
+                Dim pictureBox As CircularPictureBox = DirectCast(ctrl, CircularPictureBox)
+                ' Capture the PictureBox's image as HTML
+                Dim imageFileName As String = "image" & Guid.NewGuid().ToString() & ".jpeg"
+                pictureBox.Image.Save(imageFileName, Imaging.ImageFormat.Jpeg)
+                htmlContent.Append("<img src=""").Append(imageFileName).Append(""" />")
+            End If
+        Next
+
+        ' Close the HTML document
+        htmlContent.Append("</body></html>")
+
+        Return htmlContent.ToString()
+    End Function
+
+    Private Sub ConvertHtmlToPdf(ByVal htmlContent As String, ByVal pdfFilePath As String)
+        ' Execute wkhtmltopdf to convert HTML to PDF
+        Dim psi As New ProcessStartInfo()
+        psi.FileName = "wkhtmltopdf.exe" ' Path to wkhtmltopdf executable
+        psi.Arguments = "--page-size A4 - " & pdfFilePath ' Specify page size and input/output
+
+        psi.UseShellExecute = False
+        psi.CreateNoWindow = True
+        psi.RedirectStandardInput = True
+
+        Dim process As New Process()
+        process.StartInfo = psi
+        process.Start()
+
+        ' Write the HTML content to the input stream
+        Dim sw As StreamWriter = process.StandardInput
+        sw.Write(htmlContent)
+        sw.Close()
+
+        ' Wait for the conversion to complete
+        process.WaitForExit()

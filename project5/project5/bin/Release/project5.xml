@@ -1,0 +1,104 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+project5
+</name>
+</assembly>
+<members>
+<member name="P:project.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:project.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:project.My.Resources.Resources._126_1269312_students_student_icon_white_png">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources._126_1269405_welcome_guest_user_student_management_icon">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources._3122585">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources._334_3348085_measuring_holistic_impact_results_icon_png_white">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources._370_3706868_voter_registration_form_icon">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources._532_5328945_menu_bar_icon_white_clipart_png_download_menu">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources._532_5328945_menu_bar_icon_white_clipart_png_download_menu__1_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources.admin_dash_image">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources.admin_login">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources.Annotation_2023_07_28_134254">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources.desktop_wallpaper_rainy_day_romantic_couple_in_rain_rainy_day_for_your_mobile_tablet_explore_raining_s_rainy_background_animated_raining">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources.download">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources.download__1_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources.download__1_1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources.download__1_2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources.stud_login">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources.vote_unique_icon_vector">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources.voting_1440x550">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources.voting_hands_line_icon_people_vote_by_hand_sign_public_election_symbol_minimal_line_illustration_background_voting_hands_line_icon_pattern_banner_white_web_template_concept_vector_700_277299473">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:project.My.Resources.Resources.white_person_icon_man_icon_white_11553395092le5qk4zqtz">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:project.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

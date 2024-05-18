@@ -1,0 +1,12 @@
+D:\project_SEM5\project5\project5\obj\x86\Release\project.admin_login.resources
+D:\project_SEM5\project5\project5\obj\x86\Release\project.dashboard.resources
+D:\project_SEM5\project5\project5\obj\x86\Release\project.frm_candidate.resources
+D:\project_SEM5\project5\project5\obj\x86\Release\project.stud_login.resources
+D:\project_SEM5\project5\project5\obj\x86\Release\project.Resources.resources
+D:\project_SEM5\project5\project5\obj\x86\Release\project5.vbproj.GenerateResource.Cache
+D:\project_SEM5\project5\project5\bin\Release\project5.exe
+D:\project_SEM5\project5\project5\bin\Release\project5.pdb
+D:\project_SEM5\project5\project5\bin\Release\project5.xml
+D:\project_SEM5\project5\project5\obj\x86\Release\project5.exe
+D:\project_SEM5\project5\project5\obj\x86\Release\project5.xml
+D:\project_SEM5\project5\project5\obj\x86\Release\project5.pdb

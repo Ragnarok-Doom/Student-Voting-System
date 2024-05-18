@@ -1,0 +1,9 @@
+C:\Users\patel\AppData\Local\Temporary Projects\project\bin\Debug\project.exe
+C:\Users\patel\AppData\Local\Temporary Projects\project\bin\Debug\project.pdb
+C:\Users\patel\AppData\Local\Temporary Projects\project\bin\Debug\project.xml
+C:\Users\patel\AppData\Local\Temporary Projects\project\obj\x86\Debug\project.dashboard.resources
+C:\Users\patel\AppData\Local\Temporary Projects\project\obj\x86\Debug\project.Resources.resources
+C:\Users\patel\AppData\Local\Temporary Projects\project\obj\x86\Debug\project.vbproj.GenerateResource.Cache
+C:\Users\patel\AppData\Local\Temporary Projects\project\obj\x86\Debug\project.exe
+C:\Users\patel\AppData\Local\Temporary Projects\project\obj\x86\Debug\project.xml
+C:\Users\patel\AppData\Local\Temporary Projects\project\obj\x86\Debug\project.pdb
